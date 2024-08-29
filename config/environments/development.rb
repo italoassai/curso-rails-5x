@@ -1,6 +1,18 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+
+  #MailTrap Config
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  user_name: '60ddab85e32c15',
+  password: '6df48fbecdbb92',
+  address: 'sandbox.smtp.mailtrap.io',
+  host: 'sandbox.smtp.mailtrap.io',
+  port: '2525',
+  authentication: :login
+  }
+
   # Devise Config
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 

@@ -1,4 +1,26 @@
-<h1>UsersBackoffice::Welcome#index</h1>
-<p>Find me in app/views/users_backoffice/welcome/index.html.erb</p>
+<h1>Seja bem-vindo</h1>
 
-<p> <%= link_to 'Fazer logoff [Usuário]', destroy_user_session_path, method: :delete %> </p>
+
+    <div class="tile-stats">
+        <div class="icon"><i class="fa fa-comments-o"></i></div>
+        <div class="count"> <%= @user_statistic.total_questions %></div>
+        <h3>Total</h3>
+        <p>Total de questões respondidas</p>
+    </div>
+
+    <div class="tile-stats">
+        <div class="icon"><i class="fa fa-check-square-o"></i></div>
+        <div class="count">  <%= @user_statistic.right_questions %></div>
+        <h3>Acertos</h3>
+        <p>Parabéns, continue respondendo as questões</p>
+    </div>
+
+
+    <div class="tile-stats">
+        <div class="icon"><i class="fa fa-close"></i></div>
+        <div class="count"> <%= @user_statistic.wrong_questions %></div>
+        <h3>Erros</h3>
+        <p>Verifique as suas respostas!</p>
+    </div>
+
+
